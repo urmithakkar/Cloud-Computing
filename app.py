@@ -45,5 +45,5 @@ if __name__ == '__main__':
             db.create_all()
             AdminModel().save_to_db()
 
-    app.run(host='0.0.0.0')
+    app.run()
 
