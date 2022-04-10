@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "f5701186-cb1d-4f29-b019-9c69466f6b58",
+		"name": "CloudCompMiniProj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local testing",
+			"item": [
+				{
+					"name": "Browse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_local}}/browse/",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"browse",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user07\",\n    \"password\" : \"password94\",\n    \"listname\" : \"list07\",\n    \"role\" : \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_local}}/register",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Register new user"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user07\",\n    \"password\" : \"password94\"\n}"
+						},
+						"url": {
+							"raw": "{{url_local}}/login",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user07\",\n    \"sid\": \"b2bc86cf-e607-4a2c-ae4f-c9fbfcc22615\"\n}"
+						},
+						"url": {
+							"raw": "{{url_local}}/logout",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddToList",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user09\",\n    \"sid\": \"0ae7cc22-2d4b-41f2-a7d0-0a6c88563007\",\n    \"listname\" : \"list09\",\n    \"title\" : \"New York\"\n}"
+						},
+						"url": {
+							"raw": "{{url_local}}/add-to-list",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"add-to-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFromList",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user09\",\n    \"sid\": \"0ae7cc22-2d4b-41f2-a7d0-0a6c88563007\",\n    \"listname\" : \"list09\",\n    \"title\" : \"Breaking Bad\"\n}"
+						},
+						"url": {
+							"raw": "{{url_local}}/delete-from-list",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"delete-from-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"user09\",\n    \"sid\": \"0ae7cc22-2d4b-41f2-a7d0-0a6c88563007\",\n    \"listname\" : \"list09\"\n}"
+						},
+						"url": {
+							"raw": "{{url_local}}/view-list",
+							"host": [
+								"{{url_local}}"
+							],
+							"path": [
+								"view-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Heroku testing",
+			"item": [
+				{
+					"name": "Browse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com//browse/friends",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"",
+								"browse",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"abhinav\",\n    \"password\" : \"abhinavjain\",\n    \"listname\" : \"abhinavslist\",\n    \"role\" : \"user\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Register new user"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"abhinav\",\n    \"password\" : \"abhinavjain\"\n    \n}"
+						},
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddToList",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"abhinav\",\n    \"sid\": \"15412653-1156-4eaf-b350-eb372e3bf0fd\",\n    \"listname\" : \"abhinavslist\",\n    \"title\" : \"Game of Thrones\",\n    \"remarks\" : \"wow\"\n}"
+						},
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com/add-to-list",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"add-to-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFromList",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"abhinav\",\n    \"sid\": \"15412653-1156-4eaf-b350-eb372e3bf0fd\",\n    \"listname\" : \"abhinavslist\",\n    \"title\" : \"Friencs\"\n}"
+						},
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com/delete-from-list",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete-from-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"abhinav\",\n    \"sid\": \"15412653-1156-4eaf-b350-eb372e3bf0fd\",\n    \"listname\" : \"abhinavslist\"\n}"
+						},
+						"url": {
+							"raw": "https://world-tv-db.herokuapp.com/view-list",
+							"protocol": "https",
+							"host": [
+								"world-tv-db",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"view-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
