@@ -1,4 +1,5 @@
-QMUL_Cloud-Computing-Mini-Project
+**QMUL_Cloud-Computing-Mini-Project**
+
 This project built a Flask backend application with RESTful architecture.
 
 The project created an application to display the products available and display some covid anouncements through an external api.
