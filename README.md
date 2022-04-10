@@ -29,8 +29,11 @@
 The application has following main features:
 
 >1. Anyone from the store can use the application to browse the products.
+
 >2. Any employee can create their account and store their information.
+
 >3. Admin users can modify/update clothing information. 
+
 >4. Admin users can delete users , add users etc.
 
 **Application URL**
@@ -39,12 +42,19 @@ The application has following main features:
 
 **Application endpoints**
 > /browse
+
 > /register
+
 > /login
+
 > /logout
+
 > /add-to-list
+
 > /delete-from-list
+
 > /view-list
+
 > /delete-user
 
 
