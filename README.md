@@ -1,4 +1,4 @@
-**QMUL_Cloud-Computing-Mini-Project**
+***QMUL_Cloud-Computing-Mini-Project***
 
 This project built a Flask backend application with RESTful architecture.
 
